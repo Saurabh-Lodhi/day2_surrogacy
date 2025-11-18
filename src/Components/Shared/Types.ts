@@ -23,6 +23,7 @@ export enum SelectedPage {
   Services = 'services',
   FAQ = 'faq',
   Contact = 'contact',
+    Blog = "blog", 
 }
 
 export interface ServiceType {
@@ -34,4 +35,29 @@ export interface ServiceType {
 export interface FAQType {
   question: string;
   answer: string;
+}
+
+
+export interface BlogArticle {
+  id: string;
+  title: string;
+  excerpt: string;
+  image: string;
+  category: string;
+  date: string;
+  author: string;
+  readTime: string;
+
+  banner?: string;  // <-- banner belongs at root level
+
+  content: {
+    introduction: string;
+
+    sections: {
+      heading: string;
+      content: string;
+    }[];
+
+    conclusion: string;
+  };
 }

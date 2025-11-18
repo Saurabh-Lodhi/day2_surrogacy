@@ -150,10 +150,11 @@ const Hero = () => {
   };
 
   return (
-    <section
-      id={SelectedPage.Home}
-      className="relative w-full h-[90vh] overflow-hidden"
-    >
+   <section
+  id={SelectedPage.Home}
+  className="relative w-full h-[90vh] overflow-hidden mt-[66px]"
+>
+
       {/* ---------------- SLIDE IMAGE ---------------- */}
       <div
         className="absolute inset-0 bg-cover bg-center transition-all duration-700"
@@ -185,12 +186,50 @@ const Hero = () => {
             28,000 successful transformative journeys.
           </p>
 
-          <button
+          {/* <button
             className="px-8 py-4 rounded-full text-lg font-bold shadow-lg hover:opacity-90"
             style={{ backgroundColor: "#FF7F50", color: "white" }}
           >
             Schedule Your Appointment
           </button>
+           */}
+           <motion.button
+  initial={{ scale: 1 }}
+  whileHover={{
+    scale: 1.08,
+    boxShadow: "0px 10px 25px rgba(255,127,80,0.5)",
+  }}
+  whileTap={{ scale: 0.97 }}
+  transition={{ duration: 0.3 }}
+  className="
+    relative px-10 py-4 rounded-full text-lg font-bold 
+    overflow-hidden shadow-lg 
+    bg-gradient-to-r from-[#FF7F50] to-[#FF986A]
+    text-white tracking-wide
+  "
+>
+  {/* Shine Animation */}
+  <span
+    className="
+      absolute inset-0 bg-white/30 
+      opacity-0 group-hover:opacity-40
+      blur-xl transition duration-700
+    "
+  ></span>
+
+  {/* Light Sweep */}
+  <span
+    className="
+      absolute top-0 left-[-150%] w-1/2 h-full 
+      bg-white/40 rotate-12 
+      group-hover:left-[150%] 
+      transition-all duration-[1200ms] ease-in-out
+    "
+  ></span>
+
+  Schedule Your Appointment
+</motion.button>
+
         </motion.div>
       </div>
 
