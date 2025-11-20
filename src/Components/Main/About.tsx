@@ -667,119 +667,428 @@
 // };
 
 // export default About;
-import { SelectedPage } from "../Shared/Types";
+// import { SelectedPage } from "../Shared/Types";
 
-// Icons
-import { FaUserShield, FaMedal, FaHeadset, FaStethoscope } from "react-icons/fa";
+// // Icons
+// import { FaUserShield, FaMedal, FaHeadset, FaStethoscope } from "react-icons/fa";
+
+// // Images
+// import img1 from "../../assets/Images/iStockImages/banner2.jpg";
+// import img2 from "../../assets/Images/iStockImages/banner1.jpg";
+// import img3 from "../../assets/Images/iStockImages/hero.jpg";
+
+// const About = () => {
+//   return (
+//     <section
+//       id={SelectedPage.About}
+//       className="py-28 px-6"
+//       style={{ backgroundColor: "#E0F7F7" }}
+//     >
+//       <h2 className="text-center text-4xl md:text-5xl font-extrabold text-[#1A3D7C] mb-16 tracking-wide">
+//         EMBRYON QUALITY PLEDGE
+//       </h2>
+
+//       {/* Cards Grid */}
+//       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-2 justify-center items-center">
+
+//         {/* CARD 1 */}
+//         <div className="bg-white shadow-xl rounded-2xl overflow-hidden p-10 w-full max-w-xl mx-auto hover:scale-[1.02] transition">
+//           <img src={img1} className="w-full h-72 object-cover rounded-xl" />
+//           <div className="pt-8">
+//             <FaUserShield className="text-6xl text-[#1A3D7C] mb-5" />
+//             <h3 className="text-4xl font-bold text-[#1A3D7C] mb-4">
+//               Concierge Service
+//             </h3>
+//             <p className="text-xl font-medium text-gray-700 leading-relaxed">
+//               A coordinator throughout each step of your journey.
+//             </p>
+//           </div>
+//         </div>
+
+//         {/* CARD 2 — IMAGE BOTTOM ALIGNED */}
+//         <div className="bg-white shadow-xl rounded-3xl overflow-hidden p-10 w-full max-w-2xl mx-auto hover:scale-[1.02] transition">
+//           <div className="grid md:grid-cols-2 gap-4 items-end">
+
+//             <div>
+//               <FaMedal className="text-6xl text-[#1A3D7C] mb-5" />
+//               <h3 className="text-4xl font-bold text-[#1A3D7C] mb-4">
+//                 High Quality
+//               </h3>
+//               <p className="text-xl font-medium text-gray-700 leading-relaxed">
+//                 Our team consists of trained and highly qualified professionals.
+//               </p>
+//             </div>
+
+//             {/* BOTTOM ALIGNED IMAGE */}
+//             <div className="flex justify-end items-end">
+//               <img
+//                 src={img2}
+//                 className="w-full h-64 rounded-xl object-cover"
+//               />
+//             </div>
+
+//           </div>
+//         </div>
+
+//         {/* CARD 3 — HEXAGON IMAGE BOTTOM ALIGNED */}
+//         <div className="bg-white shadow-xl rounded-3xl p-10 w-full max-w-3xl mx-auto hover:scale-[1.03] transition-all duration-300">
+//           <div className="grid md:grid-cols-2 gap-4 items-end">
+
+//             {/* Hexagon IMG */}
+//             <div className="flex justify-end items-end">
+//               <img
+//                 src={img1}
+//                 className="w-full h-80 object-cover"
+//                 style={{
+//                   clipPath:
+//                     "polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)"
+//                 }}
+//               />
+//             </div>
+
+//             <div className="flex flex-col justify-center pl-4">
+//               <FaHeadset className="text-6xl text-[#1A3D7C] mb-5" />
+//               <h3 className="text-4xl font-bold text-[#1A3D7C] mb-4">
+//                 All-round Support 24/7
+//               </h3>
+//               <p className="text-xl font-medium text-gray-700 leading-relaxed">
+//                 We are always one phone call away whenever you need us.
+//               </p>
+//             </div>
+
+//           </div>
+//         </div>
+
+//         {/* CARD 4 — WAVE SHAPE */}
+//         <div className="bg-white shadow-xl rounded-3xl overflow-hidden p-10 w-full max-w-md mx-auto hover:scale-[1.02] transition">
+//           <div className="relative w-full mb-8">
+//             <img
+//               src={img3}
+//               className="w-full h-[500px] object-cover rounded-xl"
+//               style={{
+//                 clipPath: "ellipse(120% 60% at 50% 75%)"
+//               }}
+//             />
+//           </div>
+
+//           <FaStethoscope className="text-6xl text-[#1A3D7C] mb-5" />
+//           <h3 className="text-4xl font-bold text-[#1A3D7C] mb-4">
+//             Free 2nd Medical Opinion
+//           </h3>
+//           <p className="text-xl font-medium text-gray-700 leading-relaxed">
+//             Your medical files are assessed before your arrival for better accuracy.
+//           </p>
+//         </div>
+
+//       </div>
+//     </section>
+//   );
+// };
+
+// export default About;
+
+// import { SelectedPage } from "../Shared/Types";
+// import { motion } from "framer-motion";
+
+// // Images
+// import imgMain1 from "../../assets/Images/iStockImages/about1.jpg";
+// import imgMain2 from "../../assets/Images/iStockImages/about2.jpg";
+// import imgMain3 from "../../assets/Images/iStockImages/banner1.jpg";
+// import imgMain4 from "../../assets/Images/iStockImages/banner2.jpg";
+
+// const About = () => {
+//   return (
+//     <section
+//       id={SelectedPage.About}
+//       className="py-28 px-6 bg-[#F8FCFF]"
+//     >
+//       {/* SECTION TITLE */}
+//       <div className="max-w-7xl mx-auto mb-20 text-center">
+//         <motion.h2
+//           initial={{ opacity: 0, y: -20 }}
+//           whileInView={{ opacity: 1, y: 0 }}
+//           transition={{ duration: 0.6 }}
+//           className="text-4xl md:text-5xl font-bold text-[#1A3D7C] tracking-wide"
+//         >
+//           EMBRYON QUALITY PLEDGE
+//         </motion.h2>
+//         <div className="w-24 h-1 bg-[#FF7F50] mx-auto mt-4 rounded-full"></div>
+//         <p className="mt-4 text-lg font-body text-[#1A3D7C] opacity-80">
+//           Delivering World-Class Fertility Care Since 1994
+//         </p>
+//       </div>
+
+//       <div className="max-w-7xl mx-auto space-y-24">
+
+//         {/* ================= Z-PATTERN ROW 1 ================= */}
+//         <motion.div
+//           initial={{ opacity: 0, x: -50 }}
+//           whileInView={{ opacity: 1, x: 0 }}
+//           transition={{ duration: 0.7 }}
+//           className="grid md:grid-cols-2 gap-14 items-center"
+//         >
+//           {/* LEFT IMAGE */}
+//           <div className="rounded-3xl overflow-hidden shadow-xl">
+//             <img
+//               src={imgMain1}
+//               alt="Quality Care"
+//               className="w-full h-[420px] object-cover"
+//             />
+//           </div>
+
+//           {/* RIGHT TEXT */}
+//           <div>
+//             <h3 className="text-3xl md:text-4xl font-bold text-[#1A3D7C] mb-4">
+//               American-Managed Excellence Since 1994
+//             </h3>
+
+//             <p className="text-lg text-[#1A3D7C] opacity-90 leading-relaxed mb-6">
+//               The Embryon Family Fertility Center in Kyiv has been a global leader in
+//               fertility care for over 30 years. Our program is managed by American
+//               professionals ensuring transparency, medical precision, and
+//               world-class support every step of the way.
+//             </p>
+
+//             <p className="text-lg text-[#1A3D7C] opacity-90 leading-relaxed mb-6">
+//               We have successfully facilitated more than{" "}
+//               <span className="font-bold text-[#FF7F50]">28,000+ parenthood journeys</span>{" "}
+//               with exceptional live birth rates, full legal support, and a curated database 
+//               of top-tier egg donors and surrogates.
+//             </p>
+
+//             <p className="italic text-xl text-[#1A3D7C]/80">
+//               “One Healthy Baby at a Time.”
+//             </p>
+//           </div>
+//         </motion.div>
+
+//         {/* ================= Z-PATTERN ROW 2 (REVERSED) ================= */}
+//         <motion.div
+//           initial={{ opacity: 0, x: 50 }}
+//           whileInView={{ opacity: 1, x: 0 }}
+//           transition={{ duration: 0.7 }}
+//           className="grid md:grid-cols-2 gap-14 items-center"
+//         >
+//           {/* LEFT TEXT */}
+//           <div className="order-2 md:order-1">
+//             <h3 className="text-3xl md:text-4xl font-bold text-[#1A3D7C] mb-4">
+//               Why Intended Parents Choose Embryon
+//             </h3>
+
+//             <ul className="space-y-4 text-lg text-[#1A3D7C] opacity-90 leading-relaxed">
+//               <li>✓ American-managed operations with 30+ years of expertise</li>
+//               <li>✓ No waiting list — immediate donor & surrogate matching</li>
+//               <li>✓ World-class medical facility with advanced IVF technology</li>
+//               <li>✓ Fully screened top 5% egg donors & qualified surrogates</li>
+//               <li>✓ Transparent processes with full legal protection</li>
+//             </ul>
+
+//             <div className="mt-6 p-6 rounded-xl bg-gradient-to-r from-[#FF7F50] to-[#FF986A] text-white font-semibold shadow-lg">
+//               Every Embryon client is matched with their FIRST surrogate choice.
+//             </div>
+//           </div>
+
+//           {/* RIGHT IMAGE */}
+//           <div className="order-1 md:order-2 rounded-3xl overflow-hidden shadow-xl">
+//             <img
+//               src={imgMain2}
+//               alt="Support Team"
+//               className="w-full h-[420px] object-cover"
+//             />
+//           </div>
+//         </motion.div>
+
+//         {/* ================= Z-PATTERN ROW 3 (CARD STYLE) ================= */}
+//         <motion.div
+//           initial={{ opacity: 0, y: 40 }}
+//           whileInView={{ opacity: 1, y: 0 }}
+//           transition={{ duration: 0.7 }}
+//           className="grid md:grid-cols-2 gap-14 items-center"
+//         >
+//           {/* IMAGE */}
+//           <div className="rounded-3xl overflow-hidden shadow-xl">
+//             <img
+//               src={imgMain3}
+//               alt="Full Support"
+//               className="w-full h-[420px] object-cover"
+//             />
+//           </div>
+
+//           {/* CARD CONTENT */}
+//           <div>
+//             <h3 className="text-3xl md:text-4xl font-bold text-[#1A3D7C] mb-4">
+//               24/7 Complete Support
+//             </h3>
+//             <p className="text-lg text-[#1A3D7C] opacity-90 leading-relaxed mb-6">
+//               From your very first consultation until the moment you hold your baby,
+//               our dedicated team is available around the clock to guide, coordinate, 
+//               and care for your journey.
+//             </p>
+
+//             <div className="p-6 rounded-xl shadow-md border border-[#1A3D7C20] bg-white/70 backdrop-blur-sm">
+//               <h4 className="text-2xl font-bold text-[#1A3D7C] mb-2">A Truly Full-Service Clinic</h4>
+//               <p className="text-[#1A3D7C] opacity-80 leading-relaxed">
+//                 Medical, legal, psychological, and logistical support — everything
+//                 under one trusted brand.
+//               </p>
+//             </div>
+//           </div>
+//         </motion.div>
+
+//         {/* ================= Z-PATTERN ROW 4 (REVERSED) ================= */}
+//         <motion.div
+//           initial={{ opacity: 0, y: 50 }}
+//           whileInView={{ opacity: 1, y: 0 }}
+//           transition={{ duration: 0.7 }}
+//           className="grid md:grid-cols-2 gap-14 items-center"
+//         >
+//           {/* TEXT */}
+//           <div className="order-2 md:order-1">
+//             <h3 className="text-3xl md:text-4xl font-bold text-[#1A3D7C] mb-4">
+//               Seamless Medical Assessment Process
+//             </h3>
+//             <p className="text-lg text-[#1A3D7C] opacity-90 leading-relaxed mb-6">
+//               Before your arrival, our doctors review your medical history to plan 
+//               the optimal treatment path — saving you time, money, and unnecessary stress.
+//             </p>
+//             <p className="text-lg text-[#1A3D7C] opacity-80 leading-relaxed">
+//               This ensures your visit is efficient, clear, and completely optimized
+//               for success from Day 1.
+//             </p>
+//           </div>
+
+//           {/* IMAGE */}
+//           <div className="order-1 md:order-2 rounded-3xl overflow-hidden shadow-xl">
+//             <img
+//               src={imgMain4}
+//               alt="Medical Review"
+//               className="w-full h-[420px] object-cover"
+//             />
+//           </div>
+//         </motion.div>
+
+//       </div>
+//     </section>
+//   );
+// };
+
+// export default About;
+
+
+// src/Components/Main/About.tsx
+import { SelectedPage } from "../Shared/Types";
+import Reveal from "../Shared/Reveal";
 
 // Images
-import img1 from "../../assets/Images/iStockImages/banner2.jpg";
-import img2 from "../../assets/Images/iStockImages/banner1.jpg";
-import img3 from "../../assets/Images/iStockImages/hero.jpg";
+import imgMain1 from "../../assets/Images/iStockImages/hero.jpg";
+import imgMain2 from "../../assets/Images/iStockImages/service3.jpg";
+import imgMain3 from "../../assets/Images/iStockImages/b2.jpg";
+import imgMain4 from "../../assets/Images/iStockImages/service1.jpg";
 
 const About = () => {
   return (
-    <section
-      id={SelectedPage.About}
-      className="py-28 px-6"
-      style={{ backgroundColor: "#E0F7F7" }}
-    >
-      <h2 className="text-center text-4xl md:text-5xl font-extrabold text-[#1A3D7C] mb-16 tracking-wide">
-        EMBRYON QUALITY PLEDGE
-      </h2>
-
-      {/* Cards Grid */}
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-2 justify-center items-center">
-
-        {/* CARD 1 */}
-        <div className="bg-white shadow-xl rounded-2xl overflow-hidden p-10 w-full max-w-xl mx-auto hover:scale-[1.02] transition">
-          <img src={img1} className="w-full h-72 object-cover rounded-xl" />
-          <div className="pt-8">
-            <FaUserShield className="text-6xl text-[#1A3D7C] mb-5" />
-            <h3 className="text-4xl font-bold text-[#1A3D7C] mb-4">
-              Concierge Service
-            </h3>
-            <p className="text-xl font-medium text-gray-700 leading-relaxed">
-              A coordinator throughout each step of your journey.
-            </p>
-          </div>
-        </div>
-
-        {/* CARD 2 — IMAGE BOTTOM ALIGNED */}
-        <div className="bg-white shadow-xl rounded-3xl overflow-hidden p-10 w-full max-w-2xl mx-auto hover:scale-[1.02] transition">
-          <div className="grid md:grid-cols-2 gap-4 items-end">
-
-            <div>
-              <FaMedal className="text-6xl text-[#1A3D7C] mb-5" />
-              <h3 className="text-4xl font-bold text-[#1A3D7C] mb-4">
-                High Quality
-              </h3>
-              <p className="text-xl font-medium text-gray-700 leading-relaxed">
-                Our team consists of trained and highly qualified professionals.
-              </p>
-            </div>
-
-            {/* BOTTOM ALIGNED IMAGE */}
-            <div className="flex justify-end items-end">
-              <img
-                src={img2}
-                className="w-full h-64 rounded-xl object-cover"
-              />
-            </div>
-
-          </div>
-        </div>
-
-        {/* CARD 3 — HEXAGON IMAGE BOTTOM ALIGNED */}
-        <div className="bg-white shadow-xl rounded-3xl p-10 w-full max-w-3xl mx-auto hover:scale-[1.03] transition-all duration-300">
-          <div className="grid md:grid-cols-2 gap-4 items-end">
-
-            {/* Hexagon IMG */}
-            <div className="flex justify-end items-end">
-              <img
-                src={img1}
-                className="w-full h-80 object-cover"
-                style={{
-                  clipPath:
-                    "polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)"
-                }}
-              />
-            </div>
-
-            <div className="flex flex-col justify-center pl-4">
-              <FaHeadset className="text-6xl text-[#1A3D7C] mb-5" />
-              <h3 className="text-4xl font-bold text-[#1A3D7C] mb-4">
-                All-round Support 24/7
-              </h3>
-              <p className="text-xl font-medium text-gray-700 leading-relaxed">
-                We are always one phone call away whenever you need us.
-              </p>
-            </div>
-
-          </div>
-        </div>
-
-        {/* CARD 4 — WAVE SHAPE */}
-        <div className="bg-white shadow-xl rounded-3xl overflow-hidden p-10 w-full max-w-md mx-auto hover:scale-[1.02] transition">
-          <div className="relative w-full mb-8">
-            <img
-              src={img3}
-              className="w-full h-[500px] object-cover rounded-xl"
-              style={{
-                clipPath: "ellipse(120% 60% at 50% 75%)"
-              }}
-            />
-          </div>
-
-          <FaStethoscope className="text-6xl text-[#1A3D7C] mb-5" />
-          <h3 className="text-4xl font-bold text-[#1A3D7C] mb-4">
-            Free 2nd Medical Opinion
-          </h3>
-          <p className="text-xl font-medium text-gray-700 leading-relaxed">
-            Your medical files are assessed before your arrival for better accuracy.
+    <section id={SelectedPage.About} className="py-28 px-6 md:px-12 lg:px-16 scroll-mt-24 bg-[#F8FCFF]">
+      <div className="max-w-7xl mx-auto mb-20 text-center">
+        <Reveal>
+          <h2 className="text-4xl md:text-5xl font-bold text-[#1A3D7C] tracking-wide">EMBRYON QUALITY PLEDGE</h2>
+        </Reveal>
+        <div className="w-24 h-1 bg-[#FF7F50] mx-auto mt-4 rounded-full" />
+        <Reveal delay={0.12}>
+          <p className="mt-4 text-lg font-body text-[#1A3D7C] opacity-80">
+            Delivering World-Class Fertility Care Since 1994
           </p>
+        </Reveal>
+      </div>
+
+      <div className="max-w-7xl mx-auto space-y-24">
+        {/* Row 1 */}
+        <div className="grid md:grid-cols-2 gap-14 items-center">
+          <Reveal>
+            <div className="rounded-3xl overflow-hidden shadow-medium">
+              <img src={imgMain1} alt="Quality Care" className="w-full h-[420px] object-cover transition-transform duration-700 hover:scale-[1.06]" />
+            </div>
+          </Reveal>
+
+          <Reveal delay={0.12}>
+            <div>
+              <h3 className="text-3xl md:text-4xl font-bold text-[#1A3D7C] mb-4">American-Managed Excellence Since 1994</h3>
+              <p className="text-lg text-[#1A3D7C] opacity-90 leading-relaxed mb-6">
+                The Embryon Family Fertility Center in Kyiv has been a global leader in fertility care for over 30 years. Our program is managed by American professionals ensuring transparency and medical precision.
+              </p>
+
+              <p className="text-lg text-[#1A3D7C] opacity-90 leading-relaxed mb-6">
+                We have successfully facilitated more than <span className="font-bold text-[#FF7F50]">28,000+ parenthood journeys</span> with exceptional live birth rates, full legal support, and a curated database of top-tier egg donors and surrogates.
+              </p>
+
+              <p className="italic text-xl text-[#1A3D7C]/80">“One Healthy Baby at a Time.”</p>
+            </div>
+          </Reveal>
         </div>
 
+        {/* Row 2 (reversed) */}
+        <div className="grid md:grid-cols-2 gap-14 items-center">
+          <Reveal delay={0.08}>
+            <div className="order-2 md:order-1">
+              <h3 className="text-3xl md:text-4xl font-bold text-[#1A3D7C] mb-4">Why Intended Parents Choose Embryon</h3>
+
+              <ul className="space-y-4 text-lg text-[#1A3D7C] opacity-90 leading-relaxed">
+                <li>✓ American-managed operations with 30+ years of expertise</li>
+                <li>✓ No waiting list — immediate donor & surrogate matching</li>
+                <li>✓ World-class medical facility with advanced IVF technology</li>
+                <li>✓ Fully screened top 5% egg donors & qualified surrogates</li>
+                <li>✓ Transparent processes with full legal protection</li>
+              </ul>
+
+              <div className="mt-6 p-6 rounded-xl bg-gradient-to-r from-[#FF7F50] to-[#FF986A] text-white font-semibold shadow-medium">Every Embryon client is matched with their FIRST surrogate choice.</div>
+            </div>
+          </Reveal>
+
+          <Reveal>
+            <div className="order-1 md:order-2 rounded-3xl overflow-hidden shadow-medium">
+              <img src={imgMain2} alt="Support Team" className="w-full h-[420px] object-cover transition-transform duration-700 hover:scale-[1.06]" />
+            </div>
+          </Reveal>
+        </div>
+
+        {/* Row 3 */}
+        <div className="grid md:grid-cols-2 gap-14 items-center">
+          <Reveal>
+            <div className="rounded-3xl overflow-hidden shadow-medium">
+              <img src={imgMain3} alt="Full Support" className="w-full h-[420px] object-cover transition-transform duration-700 hover:scale-[1.06]" />
+            </div>
+          </Reveal>
+
+          <Reveal delay={0.12}>
+            <div>
+              <h3 className="text-3xl md:text-4xl font-bold text-[#1A3D7C] mb-4">24/7 Complete Support</h3>
+              <p className="text-lg text-[#1A3D7C] opacity-90 leading-relaxed mb-6">
+                From your very first consultation until the moment you hold your baby, our dedicated team is available around the clock to guide, coordinate, and care for your journey.
+              </p>
+
+              <div className="p-6 rounded-xl shadow-md border border-[#1A3D7C20] bg-white/70 backdrop-blur-sm">
+                <h4 className="text-2xl font-bold text-[#1A3D7C] mb-2">A Truly Full-Service Clinic</h4>
+                <p className="text-[#1A3D7C] opacity-80 leading-relaxed">Medical, legal, psychological, and logistical support — everything under one trusted brand.</p>
+              </div>
+            </div>
+          </Reveal>
+        </div>
+
+        {/* Row 4 */}
+        <div className="grid md:grid-cols-2 gap-14 items-center">
+          <Reveal delay={0.08}>
+            <div className="order-2 md:order-1">
+              <h3 className="text-3xl md:text-4xl font-bold text-[#1A3D7C] mb-4">Seamless Medical Assessment Process</h3>
+              <p className="text-lg text-[#1A3D7C] opacity-90 leading-relaxed mb-6">Before your arrival, our doctors review your medical history to plan the optimal treatment path — saving you time, money, and unnecessary stress.</p>
+              <p className="text-lg text-[#1A3D7C] opacity-80 leading-relaxed">This ensures your visit is efficient, clear, and completely optimized for success from Day 1.</p>
+            </div>
+          </Reveal>
+
+          <Reveal>
+            <div className="order-1 md:order-2 rounded-3xl overflow-hidden shadow-medium">
+              <img src={imgMain4} alt="Medical Review" className="w-full h-[420px] object-cover transition-transform duration-700 hover:scale-[1.06]" />
+            </div>
+          </Reveal>
+        </div>
       </div>
     </section>
   );

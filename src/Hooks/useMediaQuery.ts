@@ -17,6 +17,7 @@
 // };
 
 // export default useMediaQuery;
+
 import { useState, useEffect } from 'react';
 
 const useMediaQuery = (query: string) => {

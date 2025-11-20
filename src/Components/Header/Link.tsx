@@ -73,35 +73,85 @@
 
 
 
-import { SelectedPage } from '../Shared/Types';
-import AnchorLink from 'react-anchor-link-smooth-scroll';
+// import { SelectedPage } from '../Shared/Types';
+// import AnchorLink from 'react-anchor-link-smooth-scroll';
+
+// type Props = {
+//   page: string;
+//   selectedPage: SelectedPage;
+//   setSelectedPage: (value: SelectedPage) => void;
+//   isTopOfPage: boolean;
+//   className?: string;
+// };
+
+// const Link = ({ page, selectedPage, setSelectedPage }: Props) => {
+//   const lowerCasePage = page.toLowerCase().replace(/\s+/g, '') as SelectedPage;
+
+//   const isSelected = selectedPage === lowerCasePage;
+
+//   return (
+//     <AnchorLink
+//       className={`
+//         text-black
+//         hover:text-[#FF7F50]
+//         transition duration-300
+//         font-semibold
+//         ${isSelected ? "underline underline-offset-4" : ""}
+//       `}
+//       href={`#${lowerCasePage}`}
+//       onClick={() => setSelectedPage(lowerCasePage)}
+//     >
+//       {page}
+//     </AnchorLink>
+//   );
+// };
+
+// export default Link;
+
+
+import AnchorLink from "react-anchor-link-smooth-scroll";
+import { SelectedPage } from "../Shared/Types";
+import { motion } from "framer-motion";
 
 type Props = {
   page: string;
   selectedPage: SelectedPage;
   setSelectedPage: (value: SelectedPage) => void;
-  isTopOfPage: boolean;
+  isTopOfPage?: boolean;
   className?: string;
 };
 
-const Link = ({ page, selectedPage, setSelectedPage }: Props) => {
-  const lowerCasePage = page.toLowerCase().replace(/\s+/g, '') as SelectedPage;
-
-  const isSelected = selectedPage === lowerCasePage;
+const Link = ({
+  page,
+  selectedPage,
+  setSelectedPage,
+  className,
+}: Props) => {
+  const lowerCasePage = page.toLowerCase().replace(/\s+/g, "") as SelectedPage;
+  const isActive = selectedPage === lowerCasePage;
 
   return (
     <AnchorLink
-      className={`
-        text-black
-        hover:text-[#FF7F50]
-        transition duration-300
-        font-semibold
-        ${isSelected ? "underline underline-offset-4" : ""}
-      `}
       href={`#${lowerCasePage}`}
       onClick={() => setSelectedPage(lowerCasePage)}
+      className={`
+        relative 
+        cursor-pointer 
+        text-lg font-semibold
+        transition-all duration-300
+        ${isActive ? "text-[#FF7F50]" : "text-[#1A1A1A] hover:text-[#FF7F50]"}
+        ${className || ""}
+      `}
     >
       {page}
+
+      {/* ACTIVE UNDERLINE */}
+      {isActive && (
+        <motion.span
+          layoutId="navbar-underline"
+          className="absolute left-0 -bottom-1 h-[3px] w-full bg-[#FF7F50] rounded-full"
+        />
+      )}
     </AnchorLink>
   );
 };
